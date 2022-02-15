@@ -1,0 +1,82 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+$_imgfolder: '../img/page/';
+
+$_imgname: 'bg_horarios';
+
+$_imgjpg: $_imgfolder + $_imgname + '.jpg';
+$_imgwebp: $_imgfolder + $_imgname + '.webp';
+$_imgavif: $_imgfolder + $_imgname + '.avif';
+
+.notavif.notwebp .agenda {
+  @include mx.bg-gradient-agenda(to bottom, $_imgjpg);
+  @include mx.media-tablet {
+    @include mx.bg-gradient-agenda(to right, $_imgjpg);
+  }
+}
+
+.webp .agenda {
+  @include mx.bg-gradient-agenda(to bottom, $_imgwebp);
+  @include mx.media-tablet {
+    @include mx.bg-gradient-agenda(to right, $_imgwebp);
+  }
+}
+
+.avif .agenda {
+  @include mx.bg-gradient-agenda(to bottom, $_imgavif);
+  @include mx.media-tablet {
+    @include mx.bg-gradient-agenda(to right, $_imgavif);
+  }
+}
+
+.agenda {
+  background-repeat: no-repeat;
+  background-position: center, bottom center;
+  color: var.$color_white;
+  &__grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    @include mx.media-tablet {
+      grid-template-rows: unset;
+      @include mx.grid(2, 5rem);
+    }
+  }
+  &__content {
+    padding: 5rem 0;
+  }
+  &__heading {
+    @include mx.heading-simple();
+  }
+  &__text {
+    font-size: 2.2rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+  @include mx.media-tablet {
+    background-position: center, top right;
+  }
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 0.5rem solid var.$color_secondary;
+  &__thead {
+    background-color: var.$color_secondary;
+  }
+  &__th {
+    padding: 2rem;
+  }
+  &__tr {
+    transition: all 0.2s ease;
+    &:not(:last-of-type):hover {
+      background-color: darken(var.$color_primary, 10%);
+    }
+  }
+  &__td {
+    padding: 1rem;
+    font-size: 2.2rem;
+  }
+}

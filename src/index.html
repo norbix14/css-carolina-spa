@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carolina Spa</title>
+    <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <div class="root" id="root">
+      <header class="header container">
+        <div class="header__grid">
+          <div class="header__logo-container">
+            <img
+              class="header__logo-img"
+              loading="lazy"
+              src="./img/svg/logo.svg"
+              alt="logo"
+            />
+          </div>
+          <nav class="networks">
+            <a
+              class="networks__link"
+              href="https://facebook.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span class="networks__aria">facebook</span>
+            </a>
+            <a
+              class="networks__link"
+              href="https://twitter.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span class="networks__aria">twitter</span>
+            </a>
+            <a
+              class="networks__link"
+              href="https://instagram.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span class="networks__aria">instagram</span>
+            </a>
+            <a
+              class="networks__link"
+              href="https://pinterest.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span class="networks__aria">pinterest</span>
+            </a>
+            <a
+              class="networks__link"
+              href="https://youtube.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span class="networks__aria">youtube</span>
+            </a>
+            <a
+              class="networks__link"
+              href="https://tiktok.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span class="networks__aria">tiktok</span>
+            </a>
+          </nav>
+        </div>
+      </header>
+      <div class="navbar">
+        <div class="navbar__border">
+          <nav class="navbar__container">
+            <a href="#root" class="navbar__link">Inicio</a>
+            <a href="#welcome" class="navbar__link">Nosotros</a>
+            <a href="#services" class="navbar__link">Servicios</a>
+            <a href="#products" class="navbar__link">Productos</a>
+            <a href="#contact" class="navbar__link">Contacto</a>
+          </nav>
+        </div>
+      </div>
+      <section class="slider container swiper" id="slider">
+        <ul class="slider__container swiper-wrapper">
+          <li class="slider__image-container swiper-slide">
+            <picture>
+              <source srcset="./img/slide/slide_01.avif" type="image/avif" />
+              <source srcset="./img/slide/slide_01.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/slide/slide_01.jpg"
+                class="slider__img"
+                alt="slider"
+              />
+            </picture>
+          </li>
+          <li class="slider__image-container swiper-slide">
+            <picture>
+              <source srcset="./img/slide/slide_02.avif" type="image/avif" />
+              <source srcset="./img/slide/slide_02.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/slide/slide_02.jpg"
+                class="slider__img"
+                alt="slider"
+              />
+            </picture>
+          </li>
+          <li class="slider__image-container swiper-slide">
+            <picture>
+              <source srcset="./img/slide/slide_03.avif" type="image/avif" />
+              <source srcset="./img/slide/slide_03.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/slide/slide_03.jpg"
+                class="slider__img"
+                alt="slider"
+              />
+            </picture>
+          </li>
+        </ul>
+      </section>
+      <section class="section welcome" id="welcome">
+        <h1 class="welcome__heading">
+          Te damos la bienvenida a nuestro <span>sitio web</span>
+        </h1>
+        <p class="welcome__text">
+          Te sentirás de forma renovada luego de pasar con nuestros
+          profesionales del masaje
+        </p>
+      </section>
+      <section class="cards" id="services">
+        <div class="container cards__grid">
+          <div class="card">
+            <picture>
+              <source
+                srcset="./img/service/servicio_01.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/service/servicio_01.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="./img/service/servicio_01.jpg"
+                class="card__img"
+                alt="service"
+              />
+            </picture>
+            <div class="card__content">
+              <h2 class="card__heading">conoce sobre <span>nosotros</span></h2>
+              <a href="#" class="card__link">saber más</a>
+            </div>
+          </div>
+          <div class="card">
+            <picture>
+              <source
+                srcset="./img/service/servicio_02.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/service/servicio_02.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="./img/service/servicio_02.jpg"
+                class="card__img"
+                alt="service"
+              />
+            </picture>
+            <div class="card__content">
+              <h2 class="card__heading">nuestros <span>servicios</span></h2>
+              <a href="#" class="card__link">saber más</a>
+            </div>
+          </div>
+          <div class="card">
+            <picture>
+              <source
+                srcset="./img/service/servicio_03.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/service/servicio_03.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="./img/service/servicio_03.jpg"
+                class="card__img"
+                alt="service"
+              />
+            </picture>
+            <div class="card__content">
+              <h2 class="card__heading">visita nuestra <span>tienda</span></h2>
+              <a href="#" class="card__link">saber más</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="agenda">
+        <div class="container agenda__grid">
+          <div class="agenda__content">
+            <h3 class="agenda__heading">horarios</h3>
+            <p class="agenda__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              reprehenderit facere nemo fugit tempore.
+            </p>
+            <table class="table">
+              <thead class="table__thead">
+                <tr>
+                  <th class="table__th">Día</th>
+                  <th class="table__th">Desde</th>
+                  <th class="table__th">Hasta</th>
+                </tr>
+              </thead>
+              <tbody class="table__tbody">
+                <tr class="table__tr">
+                  <td class="table__td">Lunes</td>
+                  <td class="table__td">09:00</td>
+                  <td class="table__td">18:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">Martes</td>
+                  <td class="table__td">09:00</td>
+                  <td class="table__td">18:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">Miércoles</td>
+                  <td class="table__td">09:00</td>
+                  <td class="table__td">18:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">Jueves</td>
+                  <td class="table__td">09:00</td>
+                  <td class="table__td">18:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">Viernes</td>
+                  <td class="table__td">09:00</td>
+                  <td class="table__td">18:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">Sábados</td>
+                  <td class="table__td">09:00</td>
+                  <td class="table__td">18:00</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">Domingos</td>
+                  <td class="table__td" colspan="2">Cerrado</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <main class="section container products" id="products">
+        <h2 class="products__heading">nuestros <span>productos</span></h2>
+        <div class="products__grid">
+          <div class="product">
+            <div class="mask">
+              <picture>
+                <source
+                  srcset="./img/products/producto_01.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/products/producto_01.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/products/producto_01.jpg"
+                  class="product__img"
+                  alt="product"
+                />
+              </picture>
+            </div>
+            <div class="product__content">
+              <h3 class="product__name">producto</h3>
+              <p class="product__description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+                obcaecati quo, quia tenetur tempora magni architecto sunt
+                inventore eos. Numquam ea deserunt, minima impedit quos ipsam?
+                Amet assumenda id nam!
+              </p>
+              <p class="product__price">$25</p>
+            </div>
+          </div>
+          <div class="product">
+            <div class="mask">
+              <picture>
+                <source
+                  srcset="./img/products/producto_02.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/products/producto_02.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/products/producto_02.jpg"
+                  class="product__img"
+                  alt="product"
+                />
+              </picture>
+            </div>
+            <div class="product__content">
+              <h3 class="product__name">producto</h3>
+              <p class="product__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Doloribus sint fugit natus a debitis saepe facilis perspiciatis
+                accusantium fugiat, soluta suscipit error, repellat expedita
+                nam. Consectetur nesciunt impedit repudiandae sit.
+              </p>
+              <p class="product__price">$25</p>
+            </div>
+          </div>
+          <div class="product">
+            <div class="mask">
+              <picture>
+                <source
+                  srcset="./img/products/producto_03.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/products/producto_03.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/products/producto_03.jpg"
+                  class="product__img"
+                  alt="product"
+                />
+              </picture>
+            </div>
+            <div class="product__content">
+              <h3 class="product__name">producto</h3>
+              <p class="product__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                culpa officiis veniam delectus, nihil aut explicabo deserunt
+                cupiditate. Nostrum, dignissimos! Consectetur voluptatum amet
+                magni similique consequuntur modi laboriosam officia sunt?
+              </p>
+              <p class="product__price">$25</p>
+            </div>
+          </div>
+          <div class="product">
+            <div class="mask">
+              <picture>
+                <source
+                  srcset="./img/products/producto_04.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./img/products/producto_04.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/products/producto_04.jpg"
+                  class="product__img"
+                  alt="product"
+                />
+              </picture>
+            </div>
+            <div class="product__content">
+              <h3 class="product__name">producto</h3>
+              <p class="product__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Consequuntur rerum, suscipit sapiente ut, reiciendis repellat,
+                enim voluptatem dolores doloremque eveniet laudantium voluptates
+                explicabo atque in nam hic vel iure dolorem.
+              </p>
+              <p class="product__price">$25</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section class="appointment">
+        <h2 class="appointment__heading">Realiza una cita</h2>
+        <p class="appointment__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi nam
+          reprehenderit quos porro, earum, voluptas veritatis adipisci culpa
+          autem dolore minima ullam numquam similique explicabo in deserunt.
+          Voluptatem, ex et!
+        </p>
+        <a href="#" class="appointment__link">leer más</a>
+      </section>
+      <footer class="footer" id="contact">
+        <div class="container footer__grid">
+          <div class="footer__widget">
+            <h3 class="footer__heading">nosotros</h3>
+            <p class="footer__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio,
+              sequi corrupti recusandae rem nam officiis esse quibusdam id quo
+              iusto tempora.
+            </p>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__heading">horarios</h3>
+            <p class="footer__text">Lunes a Viernes de 09:00 a 18:00</p>
+            <p class="footer__text">Sábados de 09:00 a 14:00</p>
+            <p class="footer__text">Domingos cerrado</p>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__heading">contacto</h3>
+            <p class="footer__text">Calle 2022</p>
+            <nav class="networks footer__networks">
+              <a
+                class="networks__link"
+                href="https://facebook.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span class="networks__aria">facebook</span>
+              </a>
+              <a
+                class="networks__link"
+                href="https://twitter.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span class="networks__aria">twitter</span>
+              </a>
+              <a
+                class="networks__link"
+                href="https://instagram.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span class="networks__aria">instagram</span>
+              </a>
+              <a
+                class="networks__link"
+                href="https://pinterest.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span class="networks__aria">pinterest</span>
+              </a>
+              <a
+                class="networks__link"
+                href="https://youtube.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span class="networks__aria">youtube</span>
+              </a>
+              <a
+                class="networks__link"
+                href="https://tiktok.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span class="networks__aria">tiktok</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>Todos los derechos reservados. Carolina Spa & Salón &copy;</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/imgsupport.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.footer {
+  padding-top: 5rem;
+  &__grid {
+    @include mx.media-tablet {
+      @include mx.grid(3, 2rem);
+    }
+  }
+  &__widget {
+    text-align: center;
+  }
+  &__heading {
+    @include mx.heading-simple();
+    font-size: 3.4rem;
+  }
+  &__text {
+    line-height: 1.8;
+  }
+  &__networks {
+    justify-content: center;
+  }
+  &__copyright {
+    text-align: center;
+    max-width: 120rem;
+    margin: 2rem auto 0 auto;
+    padding: 2rem 0;
+    border-top: 0.2rem solid darken(var.$color_gray_light, 10%);
+    color: var.$color_secondary;
+  }
+}

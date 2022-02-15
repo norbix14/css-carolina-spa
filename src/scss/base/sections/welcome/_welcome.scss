@@ -1,0 +1,16 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.welcome {
+  text-align: center;
+  &__heading {
+    @include mx.heading-cursive();
+  }
+  &__text {
+    font-size: 2.6rem;
+    line-height: 1.8;
+    max-width: 50rem;
+    margin: 4rem auto 0 auto;
+    color: var.$color_gray;
+  }
+}

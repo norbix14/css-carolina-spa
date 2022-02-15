@@ -1,0 +1,109 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+$linkBorder: 0.3rem;
+
+$_svgfolder: '../img/svg/';
+
+$_iconfacebook: $_svgfolder + 'icono_facebook' + '.svg';
+$_icontwitter: $_svgfolder + 'icono_twitter' + '.svg';
+$_iconinstagram: $_svgfolder + 'icono_instagram' + '.svg';
+$_iconpinterest: $_svgfolder + 'icono_pinterest' + '.svg';
+$_iconyoutube: $_svgfolder + 'icono_youtube' + '.svg';
+$_icontiktok: $_svgfolder + 'icono_tiktok' + '.svg';
+
+.header {
+  padding-top: 2rem;
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mx.media-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__logo-img {
+    margin: 0 auto;
+    @include mx.media-tablet {
+      margin: 0;
+    }
+  }
+}
+
+.networks {
+  margin: 5rem 0;
+  display: flex;
+  gap: 1rem;
+  @include mx.media-tablet {
+    margin: 0;
+  }
+  &__aria {
+    display: block;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    margin: -0.1rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    clip: rect(0, 0, 0, 0);
+  }
+  &__link {
+    border-bottom: $linkBorder solid transparent;
+    transition: all 0.2s ease;
+    &::before {
+      content: '';
+      padding: 2rem;
+      display: inline-block;
+    }
+    &[href*='facebook.com']::before {
+      background-image: url($_iconfacebook);
+    }
+    &[href*='twitter.com']::before {
+      background-image: url($_icontwitter);
+    }
+    &[href*='instagram.com']::before {
+      background-image: url($_iconinstagram);
+    }
+    &[href*='pinterest.com']::before {
+      background-image: url($_iconpinterest);
+    }
+    &[href*='youtube.com']::before {
+      background-image: url($_iconyoutube);
+    }
+    &[href*='tiktok.com']::before {
+      background-image: url($_icontiktok);
+    }
+    &:hover {
+      border-bottom: $linkBorder solid var.$color_primary;
+    }
+  }
+}
+
+.navbar {
+  padding: 0.3rem 0;
+  margin: 2rem 0;
+  background-color: var.$color_primary;
+  &__border {
+    padding: 1.7rem 0;
+    border-block: 0.2rem dashed var.$color_white;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    @include mx.media-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__link {
+    font-size: 2.4rem;
+    transition: all 0.2s ease;
+    color: var.$color_white;
+    &:hover {
+      color: darken(var.$color_secondary, 10%);
+    }
+  }
+}

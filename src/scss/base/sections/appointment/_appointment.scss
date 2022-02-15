@@ -1,0 +1,48 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+$_imgfolder: '../img/page/';
+
+$_imgname: 'bg_citas';
+
+$_imgjpg: $_imgfolder + $_imgname + '.jpg';
+$_imgwebp: $_imgfolder + $_imgname + '.webp';
+$_imgavif: $_imgfolder + $_imgname + '.avif';
+
+.notavif.notwebp .appointment {
+  background-image: url($_imgjpg);
+}
+
+.webp .appointment {
+  background-image: url($_imgwebp);
+}
+
+.avif .appointment {
+  background-image: url($_imgavif);
+}
+
+.appointment {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  padding: 5rem 0;
+  text-align: center;
+  > * {
+    color: var.$color_white;
+  }
+  &__heading {
+    @include mx.heading-simple();
+    font-size: 6rem;
+  }
+  &__text {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+  }
+  &__link {
+    @include mx.button(var.$color_primary, var.$color_white);
+    padding: 2rem 10rem;
+  }
+}

@@ -1,0 +1,11 @@
+@use 'base/variables' as var;
+
+@mixin bg-gradient-agenda($position, $url) {
+  background-image: linear-gradient(
+      $position,
+      var.$color_primary 0%,
+      var.$color_primary 50%,
+      transparent 50%
+    ),
+    url($url);
+}

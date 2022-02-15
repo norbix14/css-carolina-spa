@@ -1,0 +1,49 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.products {
+  &__heading {
+    @include mx.heading-cursive();
+    margin-bottom: 5rem;
+  }
+  &__grid {
+    @include mx.grid(1, 2rem);
+    @include mx.media-tablet {
+      @include mx.grid(2, 2rem);
+    }
+    @include mx.media-desktop {
+      @include mx.grid(4, 2rem);
+    }
+  }
+}
+
+.product {
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__content {
+    padding: 2rem;
+    background-color: var.$color_white;
+  }
+  &__name {
+    @include mx.heading-simple();
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: var.$color_secondary;
+  }
+  &__description {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+  }
+  &__price {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var.$color_gray;
+  }
+}

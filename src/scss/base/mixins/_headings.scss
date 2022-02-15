@@ -1,0 +1,32 @@
+@use 'base/variables' as var;
+
+@mixin _heading-generic() {
+  text-align: center;
+  line-height: 0.8;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+@mixin _span-generic() {
+  text-transform: uppercase;
+}
+
+@mixin heading-cursive($break: true) {
+  @include _heading-generic;
+  text-transform: lowercase;
+  font-family: var.$font_cursive;
+  color: var.$color_secondary;
+  span {
+    @include _span-generic;
+    font-family: var.$font_primary;
+    color: var.$color_black;
+    @if ($break) {
+      display: block;
+    }
+  }
+}
+
+@mixin heading-simple {
+  @include _heading-generic;
+  text-transform: uppercase;
+}

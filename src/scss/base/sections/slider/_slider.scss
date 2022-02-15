@@ -1,0 +1,13 @@
+.slider {
+  position: relative;
+  &__image-container {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition-property: transform;
+  }
+  &__img {
+    width: 100%;
+  }
+}
